@@ -1,7 +1,7 @@
 -- Simple table to declare players.
 local players = {
 	[1] = {
-		id 		= 2,
+		id 		= 1,
 		name 		= "Antalme",
 		vehicle 	= "Nero Custom",
 		totalTime 	= 182930,
@@ -10,7 +10,7 @@ local players = {
 		cash 		= 37000
 	},
 	[2] = {
-		id 		= 1,
+		id 		= 2,
 		name 		= "TEST",
 		vehicle 	= "Nero",
 		totalTime 	= 193958,
