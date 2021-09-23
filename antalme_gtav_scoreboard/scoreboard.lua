@@ -68,7 +68,7 @@ function ShowScoreboard()
 	local row_width			= x_max - x_min -- Final row width between left and right margins.
 
 	-- Creates top-left race name and top-right finish position texts.
-	local extraMarginBottom = 0.04 -- Extra margin like the real scoreboard
+	local extraMarginBottom 	= 0.04 -- Extra margin like the real scoreboard
 	local title_x			= x_min
 	local title_y			= y_start + rowVerticalSpace * 1 - extraMarginBottom
 	local position_x		= x_max
