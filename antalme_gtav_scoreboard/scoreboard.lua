@@ -1,39 +1,39 @@
 -- Simple table to declare players.
 local players = {
 	[1] = {
-		id 			= 2,
+		id 		= 2,
 		name 		= "Antalme",
 		vehicle 	= "Nero Custom",
 		totalTime 	= 182930,
 		bestLap 	= 109293,
-		rp 			= 16000,
+		rp 		= 16000,
 		cash 		= 37000
 	},
 	[2] = {
-		id 			= 1,
+		id 		= 1,
 		name 		= "TEST",
 		vehicle 	= "Nero",
 		totalTime 	= 193958,
 		bestLap 	= 106892,
-		rp 			= 10000,
+		rp 		= 10000,
 		cash 		= 25000
 	},
 	[3] = {
-		id 			= 3,
+		id 		= 3,
 		name 		= "TEST2",
 		vehicle 	= "T20",
 		totalTime 	= 218782,
 		bestLap 	= 108297,
-		rp			= 8000,
+		rp		= 8000,
 		cash 		= 1200
 	},
 	[4] = {
-		id 			= 4,
+		id 		= 4,
 		name 		= "TEST3",
 		vehicle 	= "Zentorno",
 		totalTime 	= 252583,
 		bestLap 	= 102733,
-		rp 			= 4500,
+		rp 		= 4500,
 		cash 		= 5000
 	}
 }
@@ -60,11 +60,11 @@ function ShowScoreboard()
 
 	local row_heigh 		= 0.03 -- Size of each row
 	local row_margin		= 0.002 -- Margin between each row
-	local rowVerticalSpace	= row_heigh + row_margin -- Final heigh space of each row, including the margin and the heigh of the row.
-	local y_start_offset	= -0.1 -- Y offset of the entire scoreboard
+	local rowVerticalSpace		= row_heigh + row_margin -- Final heigh space of each row, including the margin and the heigh of the row.
+	local y_start_offset		= -0.1 -- Y offset of the entire scoreboard
 	local y_start 			= 0.5 - rowVerticalSpace / 2 * (#players + 1) + y_start_offset -- Calculates where the scoreboard should start, because it depends on the number of players.
-	local x_min				= 0.15 -- Margin left
-	local x_max				= 0.85 -- Margin right
+	local x_min			= 0.15 -- Margin left
+	local x_max			= 0.85 -- Margin right
 	local row_width			= x_max - x_min -- Final row width between left and right margins.
 
 	-- Creates top-left race name and top-right finish position texts.
@@ -81,7 +81,7 @@ function ShowScoreboard()
 	local headerPos_w		= row_width * 0.38 -- % of the total row size.
 	local headerPos_x		= x_min + headerPos_w / 2
 	local headerPos_y		= y_start + rowVerticalSpace * 2
-	local headerPos_color	= {r = 250, g = 110, b = 200, a = 255}
+	local headerPos_color		= {r = 250, g = 110, b = 200, a = 255}
 	DrawRect(headerPos_x, headerPos_y, headerPos_w, row_heigh, headerPos_color.r, headerPos_color.g, headerPos_color.b, headerPos_color.a)
 	CreateText_Scoreboard("POSITION", headerPos_x, headerPos_y - row_margin - 0.01, 0.3, 0.3, 255, 255, 255, 255, 0, 0, 0.0, 1.0, 0)
 
@@ -89,7 +89,7 @@ function ShowScoreboard()
 	local headerVeh_w		= row_width * 0.12 -- % of the total row size.
 	local headerVeh_x		= x_min + headerPos_w + headerVeh_w / 2
 	local headerVeh_y		= y_start + rowVerticalSpace * 2
-	local headerVeh_color	= {r = 250, g = 110, b = 200, a = 255}
+	local headerVeh_color		= {r = 250, g = 110, b = 200, a = 255}
 	DrawRect(headerVeh_x, headerVeh_y, headerPos_w, row_heigh, headerVeh_color.r, headerVeh_color.g, headerVeh_color.b, headerVeh_color.a)
 	CreateText_Scoreboard("VEHICLE", headerVeh_x, headerVeh_y - row_margin - 0.01, 0.3, 0.3, 255, 255, 255, 255, 0, 0, 0.0, 1.0, 0)
 
@@ -97,7 +97,7 @@ function ShowScoreboard()
 	local headerTime_w		= row_width * 0.1 -- % of the total row size
 	local headerTime_x		= x_min + headerPos_w + headerVeh_w + headerTime_w / 2
 	local headerTime_y		= y_start + rowVerticalSpace * 2
-	local headerTime_color	= {r = 250, g = 110, b = 200, a = 255}
+	local headerTime_color		= {r = 250, g = 110, b = 200, a = 255}
 	DrawRect(headerTime_x, headerTime_y, headerTime_w, row_heigh, headerTime_color.r, headerTime_color.g, headerTime_color.b, headerTime_color.a)
 	CreateText_Scoreboard("TOTAL TIME", headerTime_x, headerTime_y - row_margin - 0.01, 0.3, 0.3, 255, 255, 255, 255, 0, 0, 0.0, 1.0, 0)
 
@@ -105,7 +105,7 @@ function ShowScoreboard()
 	local headerBest_w		= row_width * 0.1 -- % of the total row size
 	local headerBest_x		= x_min + headerPos_w + headerVeh_w + headerTime_w + headerBest_w / 2
 	local headerBest_y		= y_start + rowVerticalSpace * 2
-	local headerBest_color	= {r = 250, g = 110, b = 200, a = 255}
+	local headerBest_color		= {r = 250, g = 110, b = 200, a = 255}
 	DrawRect(headerBest_x, headerBest_y, headerTime_w, row_heigh, headerBest_color.r, headerBest_color.g, headerBest_color.b, headerBest_color.a)
 	CreateText_Scoreboard("BEST LAP", headerBest_x, headerBest_y - row_margin - 0.01, 0.3, 0.3, 255, 255, 255, 255, 0, 0, 0.0, 1.0, 0)
 
@@ -113,7 +113,7 @@ function ShowScoreboard()
 	local headerRp_w		= row_width * 0.1 -- % of the total row size
 	local headerRp_x		= x_min + headerPos_w + headerVeh_w + headerTime_w + headerBest_w + headerRp_w / 2
 	local headerRp_y		= y_start + rowVerticalSpace * 2
-	local headerRp_color	= {r = 250, g = 110, b = 200, a = 255}
+	local headerRp_color		= {r = 250, g = 110, b = 200, a = 255}
 	DrawRect(headerRp_x, headerRp_y, headerTime_w, row_heigh, headerRp_color.r, headerRp_color.g, headerRp_color.b, headerRp_color.a)
 	CreateText_Scoreboard("RP", headerRp_x, headerRp_y - row_margin - 0.01, 0.3, 0.3, 255, 255, 255, 255, 0, 0, 0.0, 1.0, 0)
 
@@ -121,7 +121,7 @@ function ShowScoreboard()
 	local headerCash_w		= row_width * 0.1 -- % of the total row size
 	local headerCash_x		= x_min + headerPos_w + headerVeh_w + headerTime_w + headerBest_w + headerRp_w + headerCash_w / 2
 	local headerCash_y		= y_start + rowVerticalSpace * 2
-	local headerCash_color	= {r = 250, g = 110, b = 200, a = 255}
+	local headerCash_color		= {r = 250, g = 110, b = 200, a = 255}
 	DrawRect(headerCash_x, headerCash_y, headerTime_w, row_heigh, headerCash_color.r, headerCash_color.g, headerCash_color.b, headerCash_color.a)
 	CreateText_Scoreboard("CASH", headerCash_x, headerCash_y - row_margin - 0.01, 0.3, 0.3, 255, 255, 255, 255, 0, 0, 0.0, 1.0, 0)
 
@@ -129,7 +129,7 @@ function ShowScoreboard()
 	local headerBet_w		= row_width * 0.1 -- % of the total row size
 	local headerBet_x		= x_min + headerPos_w + headerVeh_w + headerTime_w + headerBest_w + headerRp_w + headerCash_w + headerBet_w / 2
 	local headerBet_y		= y_start + rowVerticalSpace * 2
-	local headerBet_color	= {r = 250, g = 110, b = 200, a = 255}
+	local headerBet_color		= {r = 250, g = 110, b = 200, a = 255}
 	DrawRect(headerBet_x, headerBet_y, headerTime_w, row_heigh, headerBet_color.r, headerBet_color.g, headerBet_color.b, headerBet_color.a)
 	CreateText_Scoreboard("BETTING", headerBet_x, headerBet_y - row_margin - 0.01, 0.3, 0.3, 255, 255, 255, 255, 0, 0, 0.0, 1.0, 0)
 
@@ -233,7 +233,7 @@ Citizen.CreateThread(function()
 				vehicle 	= "Vehicle_" .. tostring(math.random(0, 1000000)),
 				totalTime 	= math.random(25000, 50000),
 				bestLap 	= math.random(10000, 25000),
-				rp 			= math.random(0, 16000),
+				rp 		= math.random(0, 16000),
 				cash 		= math.random(0, 100000)
 			})
 		end
