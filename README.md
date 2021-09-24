@@ -3,7 +3,7 @@ FiveM scoreboard that is similar to the real GTA V race final scoreboard.
 
 ![alt text](https://i.imgur.com/qcZ1RNh.png)
 
-This resource is not intended to be used on it own and you sould tweak the script to fit your needs!  
+This resource is not intended to be used on its own and you sould tweak the script to fit your needs!  
 This scoreboard only uses [DrawRect](https://docs.fivem.net/natives/?_0x3A618A217E5154F0) and Text.  
 The scoreboard can only show 16 players properly, because it seems that GTA V can only draw 144 (I guess) Text's at the same frame.  
 The code can be easily optimized, but then, each portion of the code wouldn't be so redeable.
